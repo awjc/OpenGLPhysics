@@ -113,22 +113,22 @@ void init()
 	// ------------------------
 
 	// - geometry shader does nothing (just creates identical output triangle for each input triangle)
-	//phongShader      = new Shader("vshader_phong.glsl", "fshader_phong.glsl", "gshader_passthrough.glsl");
+	//phongShader      = new Shader("../shaders/vshader_phong.glsl", "../shaders/fshader_phong.glsl", "../shaders/gshader_passthrough.glsl");
 
 	// - geometry shader does position and lighting calculation (vertex shader just passes normal and position)
-	//phongShader      = new Shader("vshader_phong_passthrough.glsl", "fshader_phong.glsl", "gshader_lightingcalc.glsl");
+	//phongShader      = new Shader("../shaders/vshader_phong_passthrough.glsl", "../shaders/fshader_phong.glsl", "../shaders/gshader_lightingcalc.glsl");
 
 	// - geometry shader can shrink each polygon about its center (use c/C keys) and/or explode along face normal (e/E keys)
-	phongShader      = new Shader("vshader_phong_passthrough_with_light.glsl", "fshader_cel.glsl", "gshader_explode.glsl");
+	phongShader      = new Shader("../shaders/vshader_phong_passthrough_with_light.glsl", "../shaders/fshader_cel.glsl", "../shaders/gshader_explode.glsl");
 
 	// - geometry shader tesselates each input triangle into three output triangles, potentially moved along original normal (t/T keys)
-	//phongShader      = new Shader("vshader_phong_passthrough.glsl", "fshader_phong.glsl", "gshader_spikes.glsl");
+	//phongShader      = new Shader("../shaders/vshader_phong_passthrough.glsl", "../shaders/fshader_phong.glsl", "../shaders/gshader_spikes.glsl");
 
-	//phongShader      = new Shader("vshader_phong_passthrough.glsl", "fshader_phong.glsl", "gshader_outline.glsl");
-	silhShader      = new Shader("vshader_phong_passthrough.glsl", "fshader_silh.glsl", "gshader_silh.glsl");
+	//phongShader      = new Shader("../shaders/vshader_phong_passthrough.glsl", "../shaders/fshader_phong.glsl", "../shaders/gshader_outline.glsl");
+	silhShader      = new Shader("../shaders/vshader_phong_passthrough.glsl", "../shaders/fshader_silh.glsl", "../shaders/gshader_silh.glsl");
 
 	// for drawing axes
-	vertexColorShader  = new Shader("vshader.glsl", "fshader.glsl");
+	vertexColorShader  = new Shader("../shaders/vshader.glsl", "../shaders/fshader.glsl");
 
 	// Load model from obj file
 	ObjFile* m = new ObjFile(objFileName);
